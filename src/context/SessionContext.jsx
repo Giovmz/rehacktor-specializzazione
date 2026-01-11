@@ -1,5 +1,3 @@
 import { createContext } from "react";
 
-const SessionContext = createContext(null);
-
-export default SessionContext;
+export const SessionContext = createContext(null);
