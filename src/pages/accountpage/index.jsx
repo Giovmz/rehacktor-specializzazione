@@ -3,7 +3,6 @@ import supabase from "../../supabase-client";
 import { SessionContext } from "../../context/SessionContext";
 import FavoritesContext from "../../context/FavoritesContext";
 import Avatar from "../../components/Avatar";
-import { FaTrashAlt } from "react-icons/fa";
 
 export default function AccountPage() {
   const { session } = useContext(SessionContext);
@@ -60,7 +59,7 @@ export default function AccountPage() {
         first_name: firstName || null,
         last_name: lastName || null,
         avatar_url: nextAvatarUrl ?? avatarUrl ?? null,
-        updated_at: new Date(),
+        updated_at: new Date().toISOString(),
       };
 
       const { error } = await supabase.from("profiles").upsert(updates);
@@ -68,7 +67,7 @@ export default function AccountPage() {
       if (error) throw error;
 
       if (nextAvatarUrl !== null) setAvatarUrl(nextAvatarUrl);
-      alert("Profile updated");
+      alert("Profilo aggiornato");
     } catch (e) {
       alert(e?.message ?? "Error updating profile");
     } finally {
@@ -80,7 +79,7 @@ export default function AccountPage() {
     return (
       <div className="mx-auto w-full max-w-3xl px-4 py-10">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/80">
-          Devi effettuare l'accesso per poter accedere al contenuto di questa pagina.
+          Devi effettuare l&apos;accesso per poter accedere al contenuto di questa pagina.
         </div>
       </div>
     );
@@ -97,16 +96,16 @@ export default function AccountPage() {
 
       <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
         <form onSubmit={(e) => updateProfile(e, null)} className="space-y-6">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <Avatar
               url={avatarUrl}
               size={96}
               onUpload={(url) => updateProfile(null, url)}
             />
 
-            <div className="text-right">
+            <div className="sm:text-right">
               <p className="text-xs text-white/50">Email</p>
-              <p className="text-sm text-white/90">{session.user.email}</p>
+              <p className="break-all text-sm text-white/90">{session.user.email}</p>
             </div>
           </div>
 
@@ -157,9 +156,7 @@ export default function AccountPage() {
       <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div className="mb-4">
           <h2 className="text-lg font-semibold text-white">Preferiti</h2>
-          <p className="mt-1 text-sm text-white/60">
-            I giochi che hai salvato
-          </p>
+          <p className="mt-1 text-sm text-white/60">I giochi che hai salvato</p>
         </div>
 
         {favorites?.length ? (
@@ -178,16 +175,15 @@ export default function AccountPage() {
                 </div>
 
                 <div className="flex items-center justify-between gap-3 p-3">
-                  <p className="line-clamp-1 text-sm font-medium text-white">
+                  <p className="min-w-0 flex-1 truncate text-sm font-medium text-white">
                     {game.game_name}
                   </p>
 
                   <button
                     type="button"
                     onClick={() => removeFavorite(game.game_id)}
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 hover:bg-white/10"
+                    className="shrink-0 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 hover:bg-white/10"
                   >
-                    <FaTrashAlt />
                     Rimuovi
                   </button>
                 </div>
