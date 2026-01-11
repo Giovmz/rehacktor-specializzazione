@@ -24,7 +24,7 @@ return (
     <div className="flex gap-2">
       <input
         type="text"
-        placeholder={ariaInvalid ? "Scrivi qui" : "Search a game"}
+        placeholder={ariaInvalid ? "Scrivi qui" : "Cerca un gioco"}
         onChange={(event) => setSearch(event.target.value)}
         value={search}
         aria-invalid={ariaInvalid}
