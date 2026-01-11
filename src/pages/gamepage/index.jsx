@@ -57,7 +57,7 @@ export default function GamePage() {
               <div className="text-sm text-slate-400">
                 {genres ? <small className="block">{genres}</small> : null}
                 {data.released ? (
-                  <small className="block">Released: {data.released}</small>
+                  <small className="block">Rilascio: {data.released}</small>
                 ) : null}
               </div>
 

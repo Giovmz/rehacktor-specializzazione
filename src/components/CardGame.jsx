@@ -23,7 +23,7 @@ export default function CardGame({ game }) {
 
         <div className="text-sm text-slate-400">
           {genres ? <small className="block">{genres}</small> : null}
-          {game.released ? <small className="block">Released: {game.released}</small> : null}
+          {game.released ? <small className="block">Rilascio: {game.released}</small> : null}
         </div>
 
         <div className="pt-2">
