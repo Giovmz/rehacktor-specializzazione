@@ -99,7 +99,7 @@ export default function LoginPage() {
             type="submit"
             className="w-full rounded-xl bg-white px-4 py-2 font-medium text-black hover:bg-white/90"
           >
-            Sign in
+            Entra
           </button>
         </form>
       </div>

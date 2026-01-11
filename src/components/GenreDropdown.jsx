@@ -10,7 +10,7 @@ export default function GenreDropdown() {
   return (
     <details className="group">
       <summary className="flex cursor-pointer items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white transition-colors list-none">
-        Genres
+        Genere
         <span className="transition-transform group-open:rotate-180">▾</span>
       </summary>
 

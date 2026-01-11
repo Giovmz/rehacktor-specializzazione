@@ -74,7 +74,7 @@ export default function Avatar({ url, size = 96, onUpload }) {
 
       <div className="flex flex-col gap-2">
         <label className="inline-flex w-fit cursor-pointer items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-sm text-white/90 ring-1 ring-white/10 transition hover:bg-white/15">
-          {uploading ? "Uploading..." : "Upload avatar"}
+          {uploading ? "Uploading..." : "Carica avatar"}
           <input
             type="file"
             accept="image/*"
@@ -85,7 +85,7 @@ export default function Avatar({ url, size = 96, onUpload }) {
         </label>
 
         <p className="text-xs text-white/50">
-          PNG/JPG, consigliato quadrato
+          (PNG/JPG, consigliato quadrato)
         </p>
       </div>
     </div>

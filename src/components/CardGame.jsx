@@ -31,7 +31,7 @@ export default function CardGame({ game }) {
             to={`/game/${game.id}`}
             className="inline-flex items-center justify-center rounded-lg bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-white"
           >
-            Visita il gioco
+            Dettagli
           </Link>
         </div>
       </div>

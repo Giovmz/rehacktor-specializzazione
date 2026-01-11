@@ -19,12 +19,12 @@ export default function Searchbar() {
 
 return (
   <form onSubmit={handleSearch} className="space-y-2">
-    <label className="block text-sm font-medium text-slate-200">Search</label>
+    <label className="block text-sm font-medium text-slate-200">Ricerca</label>
 
     <div className="flex gap-2">
       <input
         type="text"
-        placeholder={ariaInvalid ? "Devi cercare qualcosa" : "Search a game"}
+        placeholder={ariaInvalid ? "Scrivi qui" : "Search a game"}
         onChange={(event) => setSearch(event.target.value)}
         value={search}
         aria-invalid={ariaInvalid}
@@ -40,13 +40,13 @@ return (
   type="submit"
   className="rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white transition-colors"
 >
-  Go
+  Vai
 </button>
 
     </div>
 
     {ariaInvalid && (
-      <p className="text-sm text-rose-400">Inserisci un testo per cercare.</p>
+      <p className="text-sm text-rose-400">Inserisci almeno un carattere per cercare qualcosa...</p>
     )}
   </form>
 );

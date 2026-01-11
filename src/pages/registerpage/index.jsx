@@ -66,7 +66,7 @@ export default function RegisterPage() {
   return (
     <div className="mx-auto w-full max-w-md px-4 py-10">
       <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <h1 className="mb-6 text-2xl font-semibold text-white">Register</h1>
+        <h1 className="mb-6 text-2xl font-semibold text-white">Registrazione</h1>
 
         <form onSubmit={onSubmit} noValidate className="space-y-4">
           <div>
@@ -88,7 +88,7 @@ export default function RegisterPage() {
 
           <div>
             <label htmlFor="firstName" className="mb-1 block text-sm text-white/80">
-              First Name
+              Nome
             </label>
             <input
               id="firstName"
@@ -107,7 +107,7 @@ export default function RegisterPage() {
 
           <div>
             <label htmlFor="lastName" className="mb-1 block text-sm text-white/80">
-              Last Name
+              Cognome
             </label>
             <input
               id="lastName"
@@ -166,7 +166,7 @@ export default function RegisterPage() {
             type="submit"
             className="w-full rounded-xl bg-white px-4 py-2 font-medium text-black hover:bg-white/90"
           >
-            Sign up
+            Registrati
           </button>
         </form>
       </div>

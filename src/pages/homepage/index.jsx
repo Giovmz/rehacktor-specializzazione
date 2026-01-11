@@ -10,8 +10,8 @@ export default function HomePage() {
 return (
   <>
     <div className="mb-4 flex items-end justify-between gap-3">
-      <h1 className="text-2xl font-bold text-slate-100">Home</h1>
-      <span className="text-sm text-slate-400">RAWG · games</span>
+      <h1 className="text-2xl font-bold text-slate-100">Catalogo</h1>
+      <span className="text-sm text-slate-400">RAWG · API</span>
     </div>
 
     {loading && <p className="text-slate-300">Loading...</p>}

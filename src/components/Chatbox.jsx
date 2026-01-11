@@ -31,7 +31,7 @@ export default function Chatbox({ data }) {
 
       {!session ? (
         <p className="text-sm text-white/60">
-          Devi essere loggato per scrivere in chat.
+          Devi aver effettuato l'accesso e confermato l'email di registrazione per scrivere in chat.
         </p>
       ) : (
         <form onSubmit={handleMessageSubmit} className="flex gap-2">

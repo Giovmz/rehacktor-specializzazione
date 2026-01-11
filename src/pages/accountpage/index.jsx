@@ -80,7 +80,7 @@ export default function AccountPage() {
     return (
       <div className="mx-auto w-full max-w-3xl px-4 py-10">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/80">
-          Devi essere loggato per vedere questa pagina.
+          Devi effettuare l'accesso per poter accedere al contenuto di questa pagina.
         </div>
       </div>
     );
@@ -122,7 +122,7 @@ export default function AccountPage() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70">First name</label>
+              <label className="text-sm text-white/70">Nome</label>
               <input
                 type="text"
                 value={firstName}
@@ -132,7 +132,7 @@ export default function AccountPage() {
             </div>
 
             <div className="space-y-2 md:col-span-2">
-              <label className="text-sm text-white/70">Last name</label>
+              <label className="text-sm text-white/70">Cognome</label>
               <input
                 type="text"
                 value={lastName}
@@ -148,7 +148,7 @@ export default function AccountPage() {
               disabled={loading}
               className="rounded-xl bg-white/10 px-4 py-2 text-sm text-white ring-1 ring-white/10 transition hover:bg-white/15 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading ? "Loading..." : "Update"}
+              {loading ? "Loading..." : "Aggiorna"}
             </button>
           </div>
         </form>
@@ -156,7 +156,7 @@ export default function AccountPage() {
 
       <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div className="mb-4">
-          <h2 className="text-lg font-semibold text-white">Favorites</h2>
+          <h2 className="text-lg font-semibold text-white">Preferiti</h2>
           <p className="mt-1 text-sm text-white/60">
             I giochi che hai salvato
           </p>
@@ -196,7 +196,7 @@ export default function AccountPage() {
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm text-white/60">
-            Non ci sono favoriti al momento.
+            Non ci sono preferiti attualmente.
           </div>
         )}
       </div>
