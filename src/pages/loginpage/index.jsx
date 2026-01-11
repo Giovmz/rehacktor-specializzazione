@@ -34,8 +34,7 @@ export default function LoginPage() {
       return;
     }
 
-    alert("Signed in");
-    setTimeout(() => navigate("/"), 1000);
+    navigate("/");
   };
 
   const onBlur = (property) => {
