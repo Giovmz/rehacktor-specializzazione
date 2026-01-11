@@ -1,29 +1,7 @@
 export default function Footer() {
   return (
-    <footer>
-      <ul>
-        <li>
-          <strong>Rehacktor</strong>
-        </li>
-      </ul>
-
-      <ul>
-        <li>
-          <a href="#" className="secondary">...</a>
-        </li>
-      </ul>
-
-      <ul>
-        <li>
-          <a href="#" className="secondary">...</a>
-        </li>
-      </ul>
-
-      <ul>
-        <li>
-          <a href="#" className="secondary">...</a>
-        </li>
-      </ul>
+    <footer className="border-t border-slate-800 bg-slate-950 px-6 py-4 text-sm text-slate-400">
+      <strong className="text-slate-200">© Rehacktor</strong>
     </footer>
   );
 }
