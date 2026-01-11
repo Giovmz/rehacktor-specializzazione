@@ -16,7 +16,7 @@ export default function GenrePage() {
 
   return (
     <>
-      <h2>Welcome to {genre} page</h2>
+      <h2 className="mb-6">Genere {genre}:</h2>
 
       <div className="grid-games-list">
         {loading && <article>Loading...</article>}
